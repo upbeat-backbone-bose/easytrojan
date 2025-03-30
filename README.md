@@ -239,7 +239,6 @@ ALPN: h2/http1.1
 >- 2022年11月末，已有超过100台服务器使用该项目部署，暂未收到用户服务器端口被封的反馈
 >- 2022年黑色星期五，将该部署方案制作成脚本并发布，并在10天后登上Github Trending总榜
 
-## Stargazers over time
 [![Stargazers over time](https://starchart.cc/upbeat-backbone-bose/trojan.svg?variant=adaptive)](https://starchart.cc/upbeat-backbone-bose/trojan)
 
 ---
