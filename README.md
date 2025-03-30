@@ -1,5 +1,6 @@
 ![language](https://img.shields.io/badge/language-Shell_&_Go-brightgreen.svg)
-![release](https://img.shields.io/badge/release-v2.0_20221212-blue.svg)
+![release](https://img.shields.io/badge/release-v2.1_20250330-blue.svg)
+
 # EasyTrojan #
 
 该分支用于提供二进制文件下载，以解决caddy官网在线编译不稳定的问题
