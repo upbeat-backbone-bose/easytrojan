@@ -33,10 +33,10 @@ fi
 
 case $(uname -m) in
     x86_64)
-        caddy_url=https://raw.githubusercontent.com/eastmaple/easytrojan/caddy/caddy_trojan_linux_amd64.tar.gz
+        caddy_url=https://raw.githubusercontent.com/upbeat-backbone-bose/trojan/caddy/caddy_trojan_linux_amd64.tar.gz
         ;;
     aarch64)
-        caddy_url=https://raw.githubusercontent.com/eastmaple/easytrojan/caddy/caddy_trojan_linux_arm64.tar.gz
+        caddy_url=https://raw.githubusercontent.com/upbeat-backbone-bose/trojan/caddy/caddy_trojan_linux_arm64.tar.gz
         ;;
     *) 
         echo "Error: Your system version does not support"
