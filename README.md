@@ -163,8 +163,7 @@ ALPN: h2/http1.1
 >- Android </br>
 > [配置示例](https://testingcf.jsdelivr.net/gh/upbeat-backbone-bose/trojan@client/v2rayng-trojan.png) | [V2rayNG](https://github.com/2dust/v2rayNG/releases) | [加速下载](https://ghproxy.com/https://github.com/2dust/v2rayNG/releases/download/1.8.5/v2rayNG_1.8.5.apk) 
 >- iOS </br>
-> [配置示例](https://testingcf.jsdelivr.net/gh/upbeat-backbone-bose/trojan@client/shadowrocket-trojan.png) | [Shadowrocket](https://apps.apple.com/us/app/shadowrocket/id932747118) | [AppStore海外代购](https://www.rocketgirls.space/product)
-
+> [配置示例](https://testingcf.jsdelivr.net/gh/upbeat-backbone-bose/trojan@client/shadowrocket-trojan.png) | [Shadowrocket](https://apps.apple.com/us/app/shadowrocket/id932747118)
 - OpenWRT passwall [配置示例](https://testingcf.jsdelivr.net/gh/upbeat-backbone-bose/trojan@client/passwall-trojan.png)
 
 - Xray连接trojan部分示例
@@ -246,5 +245,5 @@ ALPN: h2/http1.1
 
 #### 鸣谢项目 ####
 [CaddyServer](https://github.com/caddyserver/caddy) </br>
-[CaddyTrojan](https://github.com/imgk/caddy-trojan)
+[CaddyTrojan](https://github.com/imgk/caddy-trojan) </br>
 [EasyTrojan](https://github.com/eastmaple/easytrojan)
