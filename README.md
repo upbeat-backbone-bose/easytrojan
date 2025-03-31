@@ -21,8 +21,7 @@
 >- iOS </br>
 > [配置示例](https://raw.githubusercontent.com/upbeat-backbone-bose/easytrojan/client/shadowrocket-trojan.png) | [Shadowrocket](https://apps.apple.com/us/app/shadowrocket/id932747118) 
 
-- OpenWRT passwall </br>
-- [配置示例](https://raw.githubusercontent.com/upbeat-backbone-bose/easytrojan/client/passwall-trojan.png)
+- OpenWRT passwall [配置示例](https://raw.githubusercontent.com/upbeat-backbone-bose/easytrojan/client/passwall-trojan.png)
 
 - Xray连接trojan部分示例
 ```
