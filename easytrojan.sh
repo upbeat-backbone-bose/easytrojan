@@ -243,8 +243,8 @@ fi
 sysctl -p
 
 check_http=$(curl -L http://"$nip_domain")
-[ "$check_http" != "Service Unavailable" ] && { echo "You have installed EasyTrojan 2.0,please enable TCP port 80 and 443"; exit 1; }
+[ "$check_http" != "Service Unavailable" ] && { echo "You have installed EasyTrojan 2.1,please enable TCP port 80 and 443"; exit 1; }
 
 clear
 
-echo "You have successfully installed EasyTrojan 2.0" && echo "Address: $nip_domain | Port: 443 | Password: $trojan_passwd | Alpn: h2,http/1.1"
+echo "You have successfully installed EasyTrojan 2.1" && echo "Address: $nip_domain | Port: 443 | Password: $trojan_passwd | Alpn: h2,http/1.1"
