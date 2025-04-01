@@ -6,7 +6,7 @@
 
 - 该项目会自动提供trojan服务所需的免费域名与证书，无需购买、解析等繁琐操作
 
-- 支持RHEL 7、8、9 (CentOS、RedHat、AlmaLinux、RockyLinux)、Debian 9、10、11、12、Ubuntu 16、18、20、22
+- 支持RHEL 7/8/9(CentOS、RedHat、AlmaLinux、RockyLinux)、Debian 9/10/11/12、Ubuntu 16/18/20/22/24、OpenCloudOS 8/9
 
 - 技术原理不做解释，初衷只为解决个人用户与主机商家被阻断连接的问题，降低大量IP被阻断造成的各种后续影响
 
@@ -26,7 +26,7 @@ curl https://raw.githubusercontent.com/upbeat-backbone-bose/easytrojan/main/easy
 # RHEL 7、8、9 (CentOS、RedHat、AlmaLinux、RockyLinux) 放行端口命令
 firewall-cmd --permanent --add-port=80/tcp --add-port=443/tcp && firewall-cmd --reload && iptables -F
 
-# Debian 9、10、11、12、Ubuntu 16、18、20、22 放行端口命令
+# Debian 9、10、11、12、Ubuntu 16、18、20、22、24 放行端口命令
 sudo ufw allow proto tcp from any to any port 80,443 && sudo iptables -F
 ```
 > 验证端口是否放行 (示例IP应修改为trojan服务器的IP)
@@ -122,7 +122,7 @@ sed -i "s/443/8443/g" /etc/caddy/Caddyfile && systemctl restart caddy.service
 # RHEL 7、8、9 (CentOS、RedHat、AlmaLinux、RockyLinux)
 systemctl stop firewalld.service && systemctl disable firewalld.service
 
-# Debian 9、10、11、Ubuntu 16、18、20、22
+# Debian 9、10、11、12、Ubuntu 16、18、20、22、24
 sudo ufw disable
 ```
 
@@ -215,30 +215,6 @@ ALPN: h2/http1.1
 > 警告：请勿在移动设备及其它除Mac外的ARM设备上使用Clash及不包含UTLS指纹功能的客户端连接trojan
 
 ---
-
-#### 数据报告 ####
-
-自北京时间2022年10月3日起，不断有中国大陆的用户报告基于TLS的代理服务器被封端口。
-
->- 普遍现象：先被封禁443端口，更换端口后会在1~2天的时间内被再次封禁，多次更换端口后服务器IP被阻断
->- 讨论结果：客户端指纹、服务端指纹、连接数量过多、TLS in TLS被识别等，总之众说纷纭，没有解决方案
-
-该项目经过多台服务器测试，以及与部分包含trojan协议的客户端开发者沟通，总结出了相对可靠的抗封锁方案，由于用户的客户端、网络环境差异很大，不保证部署后一定不封禁端口。
-
-> 样本服务器测试数据：
->- 2022年10月初，2台来自境内用户日常使用的Non-TLS代理服务器相继被阻断IP
->- 2022年10月初，2台样本服务器更换为trojan协议，客户端使用路由器连接，稳定运行
->- 2022年10月上，多用户使用移动客户端连接其中1台trojan服务器，必定出现1天内被封端口现象
->- 2022年10月上，排查原因，分析变量，调研多个被封样本，推测出三个最有可能的原因
->- 2022年10月中，逐条更换变量测试，最终确定被封问题来自一个移动端不可描述的原因
->- 2022年10月末，2台服务器在每日约10台设备连接、日流量消耗10~20G的情况下稳定运行
->- 2022年10月末，新购1台封端口重灾区的服务器，并联系了10位使用trojan被封端口的用户，内测该部署方案
->- 2022年11月初，样本服务器中，12台443端口正常，1台被封443端口，原因是客户端跳过了证书验证，更正后稳定运行
->- 2022年11月中，总计13台样本服务器，443端口全部正常，期间有围观用户尝试部署，未收到端口被封反馈
->- 2022年11月末，少量用户在移动设备使用clash客户端连接trojan被封端口，更换为该项目建议的客户端后均稳定运行
->- 2022年11月末，已有超过100台服务器使用该项目部署，暂未收到用户服务器端口被封的反馈
->- 2022年黑色星期五，将该部署方案制作成脚本并发布，并在10天后登上Github Trending总榜
-
 [![Stargazers over time](https://starchart.cc/upbeat-backbone-bose/easytrojan.svg?variant=adaptive)](https://starchart.cc/upbeat-backbone-bose/easytrojan)
 
 ---
